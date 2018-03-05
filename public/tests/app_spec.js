@@ -16,9 +16,15 @@ describe('LearnJS', function() {
     });
 
     describe('problem view', function() {
-        it('has a title that includes the problem number', function() {
-        var view = learnjs.problemView('1');
-        expect(view.text()).toEqual('Problem #1 Comming soon!')
+        it('has a title that includes the problem number', function () {
+            var view = learnjs.problemView('1');
+            expect(view.text()).toEqual('Problem #1 Comming soon!')
         });
+    });
+
+    it('invokes the router when loaded', function() {
+        spyOn(learnjs, 'showView');
+        learnjs.appOnReady();
+        expect(learnjs.showView).toHaveBeenCalledWith(window.location.hash);
     });
 });
