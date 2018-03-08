@@ -35,7 +35,7 @@ learnjs.appOnReady = function() {
 
 learnjs.problems = [
     {
-        description: "What is truth?",
+        description: "What is truth ?",
         code: "function problem() { return __; }"
     },
     {
