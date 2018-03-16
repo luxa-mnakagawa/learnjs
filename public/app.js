@@ -38,6 +38,7 @@ learnjs.applyObject = function(obj, elem) {
 learnjs.showView = function(hash) {
     var routes = {
         '#problem': learnjs.problemView,
+        '#': learnjs.landingView,
         '': learnjs.landingView
     };
     var hashParts = hash.split('-');
